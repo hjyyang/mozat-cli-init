@@ -1,7 +1,7 @@
 import Vue from "vue";
 import { urlParse } from "../lib/util";
-import En from "./en";
-import Ar from "./ar";
+import En from "./locales/en";
+import Ar from "./locales/ar";
 
 function t(text, variate) {
 	if (Vue.prototype.$i18n) {

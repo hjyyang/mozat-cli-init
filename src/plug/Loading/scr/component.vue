@@ -94,6 +94,7 @@ export default {
 		right: 0;
 		top: 0;
 		bottom: 0;
+		background-color: rgba($color: #000000, $alpha: 0.5);
 	}
 	ul {
 		display: flex;
@@ -103,7 +104,7 @@ export default {
 		height: var(--size);
 		margin: 0 5px;
 		border-radius: 50%;
-		background-color: rgb(216, 15, 149);
+		background-color: #ea3080;
 		transition: all 0.3s;
 		&:nth-of-type(1) {
 			animation: magnify 1.2s linear infinite reverse;

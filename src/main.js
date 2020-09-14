@@ -8,11 +8,13 @@ import VueLazyload from "vue-lazyload";
 
 import JDialog from "./plug/Dialog";
 import Loading from "./plug/Loading";
+import InfiniteScroll from "./plug/InfiniteScroll";
 
 Vue.config.productionTip = false;
 
 Vue.use(JDialog); //使用对话框，如项目中未用到对话框可注释
 Vue.use(Loading);
+Vue.use(InfiniteScroll);
 
 Vue.use(VueLazyload, {
 	preLoad: 1.3,
