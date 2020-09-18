@@ -3,16 +3,16 @@ import App from "./App.vue";
 import "./assets/css/main.scss";
 import "./lib/mixin";
 import "./lang";
-// import router from "./router";
+import router from "./router";
 import VueLazyload from "vue-lazyload";
 
-import JDialog from "./plug/Dialog";
+import Dialog from "./plug/Dialog";
 import Loading from "./plug/Loading";
 import InfiniteScroll from "./plug/InfiniteScroll";
 
 Vue.config.productionTip = false;
 
-Vue.use(JDialog); //使用对话框，如项目中未用到对话框可注释
+Vue.use(Dialog); //使用对话框，如项目中未用到对话框可注释
 Vue.use(Loading);
 Vue.use(InfiniteScroll);
 
@@ -36,5 +36,5 @@ Vue.prototype.$i18n = true; //是否开启国际化（将根据lang目录下替�
 
 new Vue({
 	render: (h) => h(App),
-	// router,
+	router,
 }).$mount("#app");

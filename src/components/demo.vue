@@ -25,6 +25,7 @@ export default {
 			list: [1, 2, 3, 4, 5, 6, 7, 8, 9],
 			loading: false,
 			noMore: false,
+			aaa: "second",
 		};
 	},
 	components: {},
@@ -37,6 +38,9 @@ export default {
 		// this.$loading();
 	},
 	methods: {
+		handleClick() {
+			console.log(123);
+		},
 		load() {
 			this.loading = true;
 			setTimeout(() => {
