@@ -12,6 +12,11 @@
 			<j-loading :visible="loading" :size="10"></j-loading>
 			<p v-if="noMore">没有更多了</p>
 		</div>
+
+		<button style="width: 100px;height:40px;" @click="testData">test</button>
+		<transition-group name="list" tag="div">
+			<div v-for="item in items" :key="item" class="item">{{ item }}</div>
+		</transition-group>
 	</div>
 </template>
 
@@ -22,10 +27,11 @@ export default {
 		return {
 			dialogShow: false,
 			title: "123",
-			list: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+			list: [1],
 			loading: false,
 			noMore: false,
 			aaa: "second",
+			items: [1, 2, 3, 4, 5, 6, 7, 8, 9],
 		};
 	},
 	components: {},
@@ -38,6 +44,9 @@ export default {
 		// this.$loading();
 	},
 	methods: {
+		testData() {
+			this.items = [9, 8, 6, 1, 2, 4, 3, 5, 7];
+		},
 		handleClick() {
 			console.log(123);
 		},
@@ -57,8 +66,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.list-move {
+  transition: transform 1s;
+}
+.list-enter-active,
+.list-leave-active {
+	transition: all 1s;
+}
+.list-enter, .list-leave-to
+/* .list-leave-active for below version 2.1.8 */ {
+	opacity: 0;
+	transform: translateY(30px);
+}
 .test {
 	width: 2rem;
+}
+.item{
+    display: flex;
 }
 .infinite-list-wrapper {
 	max-height: 3rem;
