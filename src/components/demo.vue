@@ -17,10 +17,13 @@
 		<transition-group name="list" tag="div">
 			<div v-for="item in items" :key="item" class="item">{{ item }}</div>
 		</transition-group>
+        <JEditor v-model="value"></JEditor>
 	</div>
 </template>
 
 <script>
+import JEditor from "vue-jeditor";
+import "vue-jeditor/dist/src/css/style.css";
 export default {
 	name: "demo",
 	data() {
@@ -31,10 +34,13 @@ export default {
 			loading: false,
 			noMore: false,
 			aaa: "second",
-			items: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+            items: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+            value: null
 		};
 	},
-	components: {},
+	components: {
+        JEditor
+    },
 	computed: {
 		disabled() {
 			return this.loading || this.noMore;
