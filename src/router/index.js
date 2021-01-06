@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
+import Home from "../page";
 
 Vue.use(Router);
 
@@ -8,7 +9,7 @@ const router = new Router({
 		{
 			path: "/",
 			name: "index",
-			component: () => import("../page"),
+			component: Home,
 		},
 		{
 			path: "/rule",

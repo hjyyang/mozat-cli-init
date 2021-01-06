@@ -8,10 +8,3 @@
 <script>
 export default {};
 </script>
-
-<style>
-.rule {
-	height: 100vh;
-	background-color: turquoise;
-}
-</style>

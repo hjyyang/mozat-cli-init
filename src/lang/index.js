@@ -13,6 +13,13 @@ function t(text, variate) {
 			return formatText(En, text, variate);
 		}
 	}
+	if (Vue.prototype.$lang) {
+		if (Vue.prototype.$lang == "ar") {
+			return formatText(Ar, text, variate);
+		} else {
+			return formatText(En, text, variate);
+		}
+	}
 }
 
 function formatText(lang, text, variate) {
